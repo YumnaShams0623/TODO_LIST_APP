@@ -31,7 +31,7 @@ body{
     font-size: 1.75em;
     margin-bottom:10px ;
 }
-#input{
+#taskInput{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 position: relative;
 width: 100%;
