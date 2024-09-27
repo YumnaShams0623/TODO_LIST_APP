@@ -27,12 +27,12 @@ body{
     width: 100%;
     font-weight: 600;
     text-align: center;
-    color: white;
+    color: blue;
     font-size: 1.75em;
     margin-bottom:10px ;
 }
 #taskInput{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 position: relative;
 width: 100%;
 border: none;
@@ -56,20 +56,20 @@ button{
     border-radius: 40%;
     margin-left: 30%;
     margin-top: 10px;
-     border-radius: 20px;
+    border-radius: 20px;
 
     /* position: absolute; */
     /* right: 30px; */
     /* top: 13%; */
     color: white;
-font-weight: 800;
-font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
     box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
     inset 2px 2px 5px rgba(0,0,0,0.5), 
     inset -3px -3px 5px rgba(0,0,0,0.5);
     cursor: pointer;
 }
-button:hover{
+.button:hover{
     color: white;
     font-weight: 800;
     background-color: green;
@@ -86,7 +86,7 @@ li{
     border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 5px;
-    border-radius: 10px;
+    border-radius: 10psx;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,9 +98,9 @@ li{
     /* width: calc(100% - 40px); */
     display: flex;
     align-items: center;
-    background-color: #1f83f2;
+    background-color: blue;
     margin: 15px 0;
-    padding: 10px;
+    padding: 10px 10px 10px 40px;
     min-height: 45px;
     cursor: pointer;
     border-radius: 22.5px;
@@ -108,13 +108,36 @@ li{
     box-shadow: 5px 5px 7px rgba(0,0,0,0.25), 
     inset 2px 2px 5px rgba(0,0,0,0.5),
     inset -3px -3px 5px rgba(0,0,0,0.5) ;
+    border: none;
 }
+.box li ::before{
+    content:'' ;
+    position:absolute;
+    top: 23px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: #2f363e;
+    border: 2px solid #607d86;
+        /* border-radius: 50%; */
+    transform: rotate(-45deg);
+
+}
+/* .box li ::after{ */
+    /* content: ''; */
+    /* position: absolute; */
+    /* left: 8px; */
+    /* width: 30px; */
+    /* height: 30px; */
+    /* background: #fff; */
+    /* transform: rotate(-45deg); */
+/* } */
 .box li .completed{
-    background-color: red;
+    background-color: #607d86;
     
 }
 li:hover{
-    background-color: #e9e9e9;
+    background-color: #1f83f2;
 
 }
 .completed{
@@ -124,14 +147,23 @@ li:hover{
 .remove-btn{
     background-color: red;
     border: none;
-    padding: 5px 10px;
+    padding: 5px ;
     color: white;
     border-radius: 10px;
     cursor: pointer;
     font-size: 12px;
+    width: 70px;
+    height: 30px;
 }
 .remove-btn :hover{
     background-color: red;
     border: 2px solid red;
     
+}
+#taskList{
+    position: relative;
+    margin-top: 0px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
 }

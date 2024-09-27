@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+
     <div class="container">
         <div class="box">
             <h2>To Do List</h2>
             <input type="text" placeholder="write here..." id="taskInput">
-           <button onclick="addTask()">Add Task</button>
+           <button onclick="addTask()"  class="button">Add Task</button>
             <ul id="taskList"> </ul>
         </div>
     </div>
+
+<!-- ---------------------------------------------------------------------- -->
+
     <script>
         function addTask() {
             var taskInput = document.getElementById('taskInput');
@@ -30,6 +35,7 @@
             removeButton.onclick = function () {
                 taskList.removeChild(li);
             }; 
+            
             li.onclick = function () {
                 li.classList.toggle('completed');
             };
